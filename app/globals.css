@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "../vendor/shadcn-tailwind-4.13.0.css";
+@import "maplibre-gl/dist/maplibre-gl.css";
+
+:root {
+  --background: #050b12;
+  --foreground: #e7edf5;
+  --card: #09141f;
+  --card-foreground: #e7edf5;
+  --popover: #0a1723;
+  --popover-foreground: #e7edf5;
+  --primary: #67e8f9;
+  --primary-foreground: #052029;
+  --secondary: #102231;
+  --secondary-foreground: #dce9f4;
+  --muted: #0d1b28;
+  --muted-foreground: #718096;
+  --accent: #0e2c39;
+  --accent-foreground: #a5f3fc;
+  --destructive: #fb7185;
+  --border: #203140;
+  --input: #203140;
+  --ring: #22d3ee;
+  --radius: 0.75rem;
+  --font-sans: "Inter", "Noto Sans SC", "Microsoft YaHei UI", "Microsoft YaHei", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--background); }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 80% -10%, rgba(34, 211, 238, 0.08), transparent 28rem),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 16px;
+}
+
+button, textarea { font: inherit; }
+
+::selection { background: rgba(34, 211, 238, 0.22); color: #ecfeff; }
+
+::-webkit-scrollbar { width: 9px; height: 9px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #1d3344; border: 2px solid #09141f; border-radius: 999px; }
+
+.maplibregl-map { font-family: var(--font-sans); }
+.maplibregl-ctrl-group { overflow: hidden; border: 1px solid rgba(255,255,255,0.1); background: rgba(7,17,27,0.9); box-shadow: 0 12px 36px rgba(0,0,0,0.28); }
+.maplibregl-ctrl-group button { background-color: transparent; }
+.maplibregl-ctrl-group button:hover { background-color: rgba(34,211,238,0.08); }
+.maplibregl-ctrl-icon { filter: invert(1) opacity(0.72); }
+.maplibregl-ctrl-attrib { background: rgba(7,17,27,0.8) !important; color: #64748b; }
+.maplibregl-ctrl-attrib a { color: #94a3b8; }
